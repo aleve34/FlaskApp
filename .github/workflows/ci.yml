@@ -9,7 +9,6 @@ on:
       - main
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
 
@@ -42,5 +41,5 @@ jobs:
 
     - name: Tag and Push Docker image
       run: |
-        docker tag flaskapp:latest $DOCKER_USERNAME/flaskapp:latest
-        docker push $DOCKER_USERNAME/flaskapp:latest
+        docker tag flaskapp:latest sirine3443/flaskapp:latest
+        docker push sirine3443/flaskapp:latest
