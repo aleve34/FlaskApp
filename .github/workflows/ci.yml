@@ -42,3 +42,7 @@ jobs:
     - name: Push Docker image
       run: |
         docker push sirine3443/flaskapp
+
+    - name: Push to another Docker registry
+      run: docker tag flaskapp:latest sirine3443/flaskappp:latest && docker push sirine3443/flaskappp:latest
+
