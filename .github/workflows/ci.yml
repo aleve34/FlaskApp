@@ -33,7 +33,7 @@ jobs:
       run: docker build -t flaskapp .
 
     - name: Log in to Docker Hub
-      run: echo "${{ secrets.DOCKER_passwoord }}" | docker login -u "${{ secrets.DOCKER_sirine3443 }}" --password-stdin
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
     - name: Push Docker image
       run: docker tag flaskapp:latest sirine3443/flaskapp:latest && docker push sirine3443/flaskapp:latest
