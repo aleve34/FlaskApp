@@ -31,7 +31,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t sirine3443/flaskapp .
+        docker build -t sirine3443/flaskappp .
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
