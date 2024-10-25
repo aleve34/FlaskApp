@@ -41,7 +41,7 @@ jobs:
       uses: docker/login-action@v2
       with:
         username: ${{ secrets.DOCKER_SIRINE3443 }}  # Ensure this matches your secret name
-        password: ${{ secrets.DOCKER_passwoord }}      # Ensure this matches your secret name
+        password: ${{ secrets.DOCKER_azertyazerty }}      # Ensure this matches your secret name
 
     - name: Tag and Push Docker image
       run: |
