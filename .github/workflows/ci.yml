@@ -38,8 +38,10 @@ jobs:
         echo "Docker password is set: ${{ secrets.DOCKER_PASSWORD != '' }}"
 
     - name: Log in to Docker Hub
-      run: |
-        echo "${{ secrets.DOCKER_azertyazerty }}" | docker login --username "${{ secrets.DOCKER_SIRINE3443 }}" --password-stdin
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_SIRINE3443 }}  # Ensure this matches your secret name
+        password: ${{ secrets.DOCKER_azertyazerty }}      # Ensure this matches your secret name
 
     - name: Tag and Push Docker image
       run: |
