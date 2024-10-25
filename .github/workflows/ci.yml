@@ -37,7 +37,7 @@ jobs:
         DOCKER_USERNAME: ${{ secrets.DOCKER_SIRINE3443 }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_passwoord }}
       run: |
-        echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
+        echo "$DOCKER_passwoord" | docker login --username "$DOCKER_SIRINE3443" --password-stdin
 
     - name: Tag and Push Docker image
       run: |
