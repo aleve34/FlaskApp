@@ -28,3 +28,12 @@ jobs:
 
     - name: Run tests
       run: pytest
+
+    - name: Build Docker image
+      run: docker build -t flaskapp .
+
+    - name: Log in to Docker Hub
+      run: echo "${{ secrets.DOCKER_0123.0123 }}" | docker login -u "${{ secrets.DOCKER_sirine3443 }}" --password-stdin
+
+    - name: Push Docker image
+      run: docker tag flaskapp:latest sirine3443/flaskapp:latest && docker push sirine3443/flaskapp:latest
