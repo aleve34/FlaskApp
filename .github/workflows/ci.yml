@@ -39,7 +39,7 @@ jobs:
 
     - name: Log in to Docker Hub
       run: |
-        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_SIRINE3443 }}" --password-stdin
+        echo "${{ secrets.DOCKER_azertyazerty }}" | docker login --username "${{ secrets.DOCKER_SIRINE3443 }}" --password-stdin
 
     - name: Tag and Push Docker image
       run: |
